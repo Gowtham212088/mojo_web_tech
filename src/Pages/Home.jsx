@@ -24,7 +24,7 @@ function Home() {
       fetchPages(authData.accessToken); // Fetch Facebook pages associated with the user
     }
   }, []);
-
+console.log(profile,'profile');
   const fetchPages = async (token) => {
     try {
       // Fetch user's Facebook pages using Graph API
@@ -111,7 +111,7 @@ function Home() {
       {/* Sidebar: Displays profile picture, name, and logout button */}
       <div className="w-1/4 p-4 bg-white shadow-md">
         <img
-          src={profile.picture?.data?.url}
+          src={profile?.picture}
           alt="Profile"
           className="w-20 h-20 rounded-full mx-auto"
         />
