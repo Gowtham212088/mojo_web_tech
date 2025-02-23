@@ -11,7 +11,13 @@ function Home() {
   const [fanCount, setFanCount] = useState(null);
   const [totalImpressions, setTotalImpressions] = useState(null);
   const [totalReactions, setTotalReactions] = useState(null);
+  const [views, setViews] = useState(null);
+  const [reach, setReach] = useState(null);
+  const [contentInteractions, setContentInteractions] = useState(null);
+  const [follows, setFollows] = useState(null);
   const [accessToken, setAccessToken] = useState("");
+
+  console.log({profile,pages,selectedPage,insights,fanCount,totalImpressions,totalReactions,views,reach,contentInteractions,follows,accessToken})
 
   const navigate = useNavigate();
 
@@ -24,12 +30,12 @@ function Home() {
       fetchPages(authData.accessToken); // Fetch Facebook pages associated with the user
     }
   }, []);
-console.log(profile,'profile');
+  console.log(selectedPage,'selectedPage');
   const fetchPages = async (token) => {
     try {
       // Fetch user's Facebook pages using Graph API
       const response = await axios.get(
-        `https://graph.facebook.com/v22.0/me/accounts?fields=id,name,access_token&access_token=${token}`
+        `https://graph.facebook.com/v22.0/me/accounts?fields=489993570873674,name,email,access_token&access_token=${token}`
       );
       setPages(response.data.data);
     } catch (error) {
@@ -60,35 +66,49 @@ console.log(profile,'profile');
   const fetchInsights = async (pageId) => {
     // Define the date range for insights
     const since = "2024-01-01";
-    const until = "2024-02-01";
+    const until = "2024-02-23";
 
     // Define the metrics to retrieve
     const metrics = [
-      "page_fans",
+      "page_fan_adds",
       "page_engaged_users",
       "page_impressions",
-      "page_total_actions",
+      "page_views_total",
+      "page_post_engagements",
+      "page_follower_count",
+      "page_reactions_total",
+      "page_content_clicks"
     ];
+    
 
     try {
-      // Fetch Facebook page insights using Graph API
       const response = await axios.get(
         `https://graph.facebook.com/v22.0/${pageId}/insights?metric=${metrics.join(
           ","
         )}&since=${since}&until=${until}&access_token=${accessToken}`
       );
+  
 
       // Parse and store insights data
       response.data.data.forEach((item) => {
-        if (item.name === "page_fans")
+        if (item.name === "page_follower_count")
           setFanCount(item.values[0]?.value ?? "N/A");
         if (item.name === "page_engaged_users")
           setInsights(item.values[0]?.value ?? "N/A");
         if (item.name === "page_impressions")
           setTotalImpressions(item.values[0]?.value ?? "N/A");
-        if (item.name === "page_total_actions")
+        if (item.name === "page_reactions_total")
           setTotalReactions(item.values[0]?.value ?? "N/A");
+        if (item.name === "page_views_total")
+          setViews(item.values[0]?.value ?? "N/A");
+        if (item.name === "page_reach")
+          setReach(item.values[0]?.value ?? "N/A");
+        if (item.name === "page_content_clicks")
+          setContentInteractions(item.values[0]?.value ?? "N/A");
+        if (item.name === "pages_manage_ads")
+          setFollows(item.values[0]?.value ?? "N/A");
       });
+      
     } catch (error) {
       console.error("Error fetching insights:", error);
     }
@@ -175,10 +195,32 @@ console.log(profile,'profile');
             Recent engagements: {insights}
           </li>
         </ul>
+
+        <div className="p-4 bg-white shadow-md rounded-lg">
+  <h3 className="font-bold">Total Views</h3>
+  <p className="text-lg">{views ?? "N/A"}</p>
+</div>
+
+<div className="p-4 bg-white shadow-md rounded-lg">
+  <h3 className="font-bold">Total Reach</h3>
+  <p className="text-lg">{reach ?? "N/A"}</p>
+</div>
+
+<div className="p-4 bg-white shadow-md rounded-lg">
+  <h3 className="font-bold">Content Interactions</h3>
+  <p className="text-lg">{contentInteractions ?? "N/A"}</p>
+</div>
+
+<div className="p-4 bg-white shadow-md rounded-lg">
+  <h3 className="font-bold">Total Follows</h3>
+  <p className="text-lg">{follows ?? "N/A"}</p>
+</div>
+
+
+
       </div>
     </div>
   );
 }
 
 export default Home;
-
