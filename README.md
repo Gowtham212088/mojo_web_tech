@@ -62,3 +62,15 @@ const metrics = [
 # GET THE POST LIST API
 # GET THE POSTS COMMENT SHARE AND IMPRESSIONS USING THAT POST ID
 # THE GET THE PAGE VIEWS
+
+
+
+
+
+
+
+
+
+ <li>
+                          Total Reactions: {like+love+haha+wow+sad+angry+care}
+                          </li>
