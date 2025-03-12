@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import useFacebookInsights from "../Custom-hook/useFacebookInsights";
 import useFindByPeriod from "../Functions/FilterByPeriod";
+import useGetPagesOrPosts from "../Custom-hook/useGetPagesOrPosts";
 
 function Home() {
   const sortButton = [
@@ -25,9 +26,10 @@ function Home() {
   const [contentInteractions, setContentInteractions] = useState(null);
   const [follows, setFollows] = useState(null);
   const [accessToken, setAccessToken] = useState("");
-
+  const [postDetais,setPostDetails]=useState([]);
+console.log(postDetais,'postDetais');
   const [selectedPageDetails, setSelectedPageDetails] = useState(null);
-
+console.log(selectedPageDetails,"selectedPageDetails")
   useEffect(() => {
     if (selectedPage) {
       const page = pages.find((p) => p.id === selectedPage);
@@ -52,6 +54,10 @@ function Home() {
   }, []);
 
   console.log(profile, "profile");
+
+
+// * PAGES SECTION
+
   const fetchPages = async (token) => {
     try {
       console.log("Page fetched");
@@ -75,6 +81,10 @@ function Home() {
       fetchInsights(selectedPage);
     }
   }, [selectedPage]);
+
+
+
+  // * FAN-COUNT SECTION 
 
   const fetchFanCount = async (pageId) => {
     try {
@@ -104,6 +114,44 @@ function Home() {
 
 
 
+
+// * POSTS SECTION
+
+const { data:postData, loadingPosts, errorPosts } = useGetPagesOrPosts(`https://graph.facebook.com/v22.0/${selectedPage}/posts?fields=id,message,created_time&access_token=${selectedPageDetails?.access_token}`);
+
+console.log(postData, loadingPosts, errorPosts)
+
+
+// * POSTS DETAILS SECTION
+
+const getPostDatas = async () => {
+  if (!postData?.data) return;
+
+  try {
+    const postRequests = postData.data.map((e) =>
+      axios.get(
+        `https://graph.facebook.com/v22.0/${e.id}?since=2025-01-10&until=2025-03-10&fields=comments.summary(true),shares,insights.metric(post_clicks)&access_token=${selectedPageDetails?.access_token}`
+      )
+    );
+
+    const responses = await Promise.all(postRequests);
+    const postDetailsData = responses.map((res) => res.data);
+
+    setPostDetails(postDetailsData);
+  } catch (error) {
+    console.error("Error fetching post details:", error);
+  }
+};
+
+
+
+useEffect(()=>{
+  getPostDatas()
+},[postData])
+
+
+// * REACTIONS SECTIONS
+
   // ✅ Call the custom hook at the top level
   const {
     data: pagePostReactions,
@@ -132,11 +180,10 @@ function Home() {
   } = pagePostReactionDataSorted?.values?.[1]?.value || {};
   
 
-  const check = pagePostReactionDataSorted?.values?.[1]?.value || {};
 
-  console.log(check,"check")
 
-console.log(pagePostReactionDataSorted,"pagePostReactionDataSorted");
+
+  // * IMPRESSION SECTION
 
   console.log(pageImpressions, "pageImpressions");
   // * COPIED DE-STUCTURED PAGE IMPRESSION DATA
@@ -262,9 +309,47 @@ console.log(pagePostReactionDataSorted,"pagePostReactionDataSorted");
             <p className="text-lg">{fanCount ?? "N/A"}</p>
           </div>
           <div className="p-4 bg-white shadow-md rounded-lg">
-            <h3 className="font-bold">Total Engagement</h3>
-            <p className="text-lg">{insights ?? "N/A"}</p>
-          </div>
+  <h3 className="font-bold">Total Engagement</h3>
+
+  {/* Calculate Total Engagement */}
+  <p className="text-lg">
+    {postDetais?.reduce((totalEngagement, post) => {
+      const comments = post.comments?.summary?.total_count || 0;
+      const shares = post.shares?.count || 0;
+      const postClicks = post.insights?.data?.find((insight) => insight.name === "post_clicks")?.values[0]?.value || 0;
+      
+      // Dynamic Reaction Count
+      const reactions = (post.like || 0) + (post.love || 0) + (post.wow || 0) + 
+                        (post.haha || 0) + (post.sad || 0) + (post.angry || 0) + (post.care || 0);
+      
+      return totalEngagement + comments + shares + postClicks + like+love+wow+haha+sad+angry+care;
+    }, 0)}
+  </p>
+
+  <p className="border-1">
+    {postData?.data.map((e, i) => (
+      <span key={i}>
+        <strong> Post Name - {e?.message} </strong>
+      </span>
+    ))}
+
+    {postDetais?.map((post) => (
+      <p key={post.id} className="post-container">
+        <ul>
+          <li><strong>Comments:</strong> {post.comments?.summary?.total_count || 0}</li>
+          <li><strong>Shares:</strong> {post.shares?.count || 0}</li>
+          <li><strong>Post Clicks:</strong> {post.insights?.data?.find((insight) => insight.name === "post_clicks")?.values[0]?.value || 0}</li>
+          <li>
+            <strong>Total Reactions:</strong>{" "}
+            {like+love+wow+haha+sad+angry+care}
+          </li>
+        </ul>
+      </p>
+    ))}
+  </p>
+</div>
+
+
           <div className="p-4 bg-white shadow-md rounded-lg">
             <h3 className="font-bold">Total Impressions</h3>
             <p className="text-lg">
@@ -273,7 +358,7 @@ console.log(pagePostReactionDataSorted,"pagePostReactionDataSorted");
           </div>
           <div className="p-4 bg-white shadow-md rounded-lg">
             <h3 className="font-bold">Total Reactions</h3>
-            <p className="text-lg mb-1">{like+love+wow+haha+sad+angry+care ?? "N/A"}</p>
+            <p className="text-lg mb-1">{like+love+wow+haha+sad+angry+care || 0}</p>
             <p className="text-lg px-5">
               <span> 👍 {like || 0} </span> <br/>
               <span> 💖 {love || 0} </span> <br/>
