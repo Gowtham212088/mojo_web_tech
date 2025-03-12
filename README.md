@@ -1,8 +1,57 @@
-# React + Vite
+ISSUE ==> unable to get insights
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Invalid Metrics
+Ensure all metrics you are requesting are valid and supported by the Facebook Graph API for the selected page. The following metrics are likely incorrect or deprecated:
 
-Currently, two official plugins are available:
+"page_reactions_total" → This metric does not exist; instead, use "page_actions_post_reactions_total" or "page_total_actions".
+"page_content_clicks" → This metric might not be valid; consider "page_consumptions".
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+Fix: Update the metrics array:
+
+const metrics = [
+  "page_fan_adds",
+  "page_engaged_users",
+  "page_impressions",
+  "page_views_total",
+  "page_post_engagements",
+  "page_follower_count",
+  "page_actions_post_reactions_total", // Updated metric
+  "page_consumptions" // Updated metric
+];
+
+
+
+// const getPageImpression = (access_token)=>{
+
+//       // Define the date range for insights
+//       const since = "2025-01-01";
+//       const until = "2025-03-10";
+
+  
+//   axios.request({
+//     method: 'get',
+//     maxBodyLength: Infinity,
+//     url: `https://graph.facebook.com/v22.0/${selectedPageDetails?.id}/insights?access_token=${access_token}&since=${since}&until=${until}&metric=page_impressions`,
+//     headers: { 
+//       'Content-Type': 'application/json'
+//     },
+//   })
+//   .then((response) => {
+//     console.log(JSON.stringify(response.data));
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+// }
+
+
+
+<!-- * WHILE USING SINCE & UNTIL -->
+
+# day --> add all values
+# week --> choose the greatest value
+# 28_days --> choose the greatest value
+
+<!-- * IF SINCE AND UNTIL HAVE NOT USED  -->

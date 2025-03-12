@@ -1,0 +1,743 @@
+{
+    "data": [
+        {
+            "name": "page_impressions",
+            "period": "day",
+            "values": [
+                {
+                    "value": 0,
+                    "end_time": "2025-01-11T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-12T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-13T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-14T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-15T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-16T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-17T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-18T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-19T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-20T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-21T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-22T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-23T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-24T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-25T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-26T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-27T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-28T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-29T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-30T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-31T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-01T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-02T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-03T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-04T08:00:00+0000"
+                },
+                {
+                    "value": 19,
+                    "end_time": "2025-02-05T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-06T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-07T08:00:00+0000"
+                },
+                {
+                    "value": 10,
+                    "end_time": "2025-02-08T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-09T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-10T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-11T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-12T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-13T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-14T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-15T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-16T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-17T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-18T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-19T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-20T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-21T08:00:00+0000"
+                },
+                {
+                    "value": 4,
+                    "end_time": "2025-02-22T08:00:00+0000"
+                },
+                {
+                    "value": 23,
+                    "end_time": "2025-02-23T08:00:00+0000"
+                },
+                {
+                    "value": 6,
+                    "end_time": "2025-02-24T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-25T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-26T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-27T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-28T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-03-01T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-03-02T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-03-03T08:00:00+0000"
+                },
+                {
+                    "value": 14,
+                    "end_time": "2025-03-04T08:00:00+0000"
+                },
+                {
+                    "value": 1,
+                    "end_time": "2025-03-05T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-03-06T08:00:00+0000"
+                },
+                {
+                    "value": 8,
+                    "end_time": "2025-03-07T08:00:00+0000"
+                },
+                {
+                    "value": 14,
+                    "end_time": "2025-03-08T08:00:00+0000"
+                },
+                {
+                    "value": 1,
+                    "end_time": "2025-03-09T08:00:00+0000"
+                },
+                {
+                    "value": 9,
+                    "end_time": "2025-03-10T07:00:00+0000"
+                }
+            ],
+            "title": "Daily Total Impressions",
+            "description": "Daily: The number of times any content from your Page or about your Page entered a person's screen. This includes posts, stories, ads, as well other content or information on your Page. (Total Count)",
+            "id": "489993570873674/insights/page_impressions/day"
+        },
+        {
+            "name": "page_impressions",
+            "period": "week",
+            "values": [
+                {
+                    "value": 0,
+                    "end_time": "2025-01-11T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-12T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-13T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-14T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-15T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-16T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-17T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-18T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-19T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-20T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-21T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-22T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-23T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-24T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-25T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-26T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-27T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-28T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-29T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-30T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-31T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-01T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-02T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-03T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-04T08:00:00+0000"
+                },
+                {
+                    "value": 19,
+                    "end_time": "2025-02-05T08:00:00+0000"
+                },
+                {
+                    "value": 19,
+                    "end_time": "2025-02-06T08:00:00+0000"
+                },
+                {
+                    "value": 19,
+                    "end_time": "2025-02-07T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-08T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-09T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-10T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-11T08:00:00+0000"
+                },
+                {
+                    "value": 10,
+                    "end_time": "2025-02-12T08:00:00+0000"
+                },
+                {
+                    "value": 10,
+                    "end_time": "2025-02-13T08:00:00+0000"
+                },
+                {
+                    "value": 10,
+                    "end_time": "2025-02-14T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-15T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-16T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-17T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-18T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-19T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-20T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-21T08:00:00+0000"
+                },
+                {
+                    "value": 4,
+                    "end_time": "2025-02-22T08:00:00+0000"
+                },
+                {
+                    "value": 27,
+                    "end_time": "2025-02-23T08:00:00+0000"
+                },
+                {
+                    "value": 33,
+                    "end_time": "2025-02-24T08:00:00+0000"
+                },
+                {
+                    "value": 33,
+                    "end_time": "2025-02-25T08:00:00+0000"
+                },
+                {
+                    "value": 33,
+                    "end_time": "2025-02-26T08:00:00+0000"
+                },
+                {
+                    "value": 33,
+                    "end_time": "2025-02-27T08:00:00+0000"
+                },
+                {
+                    "value": 33,
+                    "end_time": "2025-02-28T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-03-01T08:00:00+0000"
+                },
+                {
+                    "value": 6,
+                    "end_time": "2025-03-02T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-03-03T08:00:00+0000"
+                },
+                {
+                    "value": 14,
+                    "end_time": "2025-03-04T08:00:00+0000"
+                },
+                {
+                    "value": 15,
+                    "end_time": "2025-03-05T08:00:00+0000"
+                },
+                {
+                    "value": 15,
+                    "end_time": "2025-03-06T08:00:00+0000"
+                },
+                {
+                    "value": 23,
+                    "end_time": "2025-03-07T08:00:00+0000"
+                },
+                {
+                    "value": 37,
+                    "end_time": "2025-03-08T08:00:00+0000"
+                },
+                {
+                    "value": 38,
+                    "end_time": "2025-03-09T08:00:00+0000"
+                },
+                {
+                    "value": 47,
+                    "end_time": "2025-03-10T07:00:00+0000"
+                }
+            ],
+            "title": "Weekly Total Impressions",
+            "description": "Weekly: The number of times any content from your Page or about your Page entered a person's screen. This includes posts, stories, ads, as well other content or information on your Page. (Total Count)",
+            "id": "489993570873674/insights/page_impressions/week"
+        },
+        {
+            "name": "page_impressions",
+            "period": "days_28",
+            "values": [
+                {
+                    "value": 0,
+                    "end_time": "2025-01-11T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-12T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-13T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-14T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-15T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-16T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-17T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-18T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-19T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-20T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-21T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-22T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-23T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-24T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-25T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-26T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-27T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-28T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-29T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-30T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-01-31T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-01T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-02T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-03T08:00:00+0000"
+                },
+                {
+                    "value": 0,
+                    "end_time": "2025-02-04T08:00:00+0000"
+                },
+                {
+                    "value": 19,
+                    "end_time": "2025-02-05T08:00:00+0000"
+                },
+                {
+                    "value": 19,
+                    "end_time": "2025-02-06T08:00:00+0000"
+                },
+                {
+                    "value": 19,
+                    "end_time": "2025-02-07T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-08T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-09T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-10T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-11T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-12T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-13T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-14T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-15T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-16T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-17T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-18T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-19T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-20T08:00:00+0000"
+                },
+                {
+                    "value": 29,
+                    "end_time": "2025-02-21T08:00:00+0000"
+                },
+                {
+                    "value": 33,
+                    "end_time": "2025-02-22T08:00:00+0000"
+                },
+                {
+                    "value": 56,
+                    "end_time": "2025-02-23T08:00:00+0000"
+                },
+                {
+                    "value": 62,
+                    "end_time": "2025-02-24T08:00:00+0000"
+                },
+                {
+                    "value": 62,
+                    "end_time": "2025-02-25T08:00:00+0000"
+                },
+                {
+                    "value": 62,
+                    "end_time": "2025-02-26T08:00:00+0000"
+                },
+                {
+                    "value": 62,
+                    "end_time": "2025-02-27T08:00:00+0000"
+                },
+                {
+                    "value": 62,
+                    "end_time": "2025-02-28T08:00:00+0000"
+                },
+                {
+                    "value": 62,
+                    "end_time": "2025-03-01T08:00:00+0000"
+                },
+                {
+                    "value": 62,
+                    "end_time": "2025-03-02T08:00:00+0000"
+                },
+                {
+                    "value": 62,
+                    "end_time": "2025-03-03T08:00:00+0000"
+                },
+                {
+                    "value": 76,
+                    "end_time": "2025-03-04T08:00:00+0000"
+                },
+                {
+                    "value": 58,
+                    "end_time": "2025-03-05T08:00:00+0000"
+                },
+                {
+                    "value": 58,
+                    "end_time": "2025-03-06T08:00:00+0000"
+                },
+                {
+                    "value": 66,
+                    "end_time": "2025-03-07T08:00:00+0000"
+                },
+                {
+                    "value": 70,
+                    "end_time": "2025-03-08T08:00:00+0000"
+                },
+                {
+                    "value": 71,
+                    "end_time": "2025-03-09T08:00:00+0000"
+                },
+                {
+                    "value": 80,
+                    "end_time": "2025-03-10T07:00:00+0000"
+                }
+            ],
+            "title": "28 Days Total Impressions",
+            "description": "28 Days: The number of times any content from your Page or about your Page entered a person's screen. This includes posts, stories, ads, as well other content or information on your Page. (Total Count)",
+            "id": "489993570873674/insights/page_impressions/days_28"
+        }
+    ],
+    "paging": {
+        "previous": "https://graph.facebook.com/v22.0/489993570873674/insights?access_token=EAAaeIB2v4jkBO2O8jJbrZBReUNoMJhvz2iMo1UAyZCvvTOTfFJvgIOfXDjTWmn4losMsG9QXdgceupeRo12cqJ8SHDdJavRaFJZAXhaxjWFnUJ3MaWlnIHij9yvE7ZC8SAQ5w2DP7KuiPrGlcYW6VKb1drVuAbO1jezDv5yZC3aKi3CIQtBHZAd2KSfxruxA8I&since=1731398400&until=1736496000&metric=page_impressions",
+        "next": "https://graph.facebook.com/v22.0/489993570873674/insights?access_token=EAAaeIB2v4jkBO2O8jJbrZBReUNoMJhvz2iMo1UAyZCvvTOTfFJvgIOfXDjTWmn4losMsG9QXdgceupeRo12cqJ8SHDdJavRaFJZAXhaxjWFnUJ3MaWlnIHij9yvE7ZC8SAQ5w2DP7KuiPrGlcYW6VKb1drVuAbO1jezDv5yZC3aKi3CIQtBHZAd2KSfxruxA8I&since=1741590000&until=1746687600&metric=page_impressions"
+    }
+}
