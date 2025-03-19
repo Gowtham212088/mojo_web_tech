@@ -6,71 +6,169 @@ Ensure all metrics you are requesting are valid and supported by the Facebook Gr
 "page_reactions_total" → This metric does not exist; instead, use "page_actions_post_reactions_total" or "page_total_actions".
 "page_content_clicks" → This metric might not be valid; consider "page_consumptions".
 
-
-
 Fix: Update the metrics array:
 
 const metrics = [
-  "page_fan_adds",
-  "page_engaged_users",
-  "page_impressions",
-  "page_views_total",
-  "page_post_engagements",
-  "page_follower_count",
-  "page_actions_post_reactions_total", // Updated metric
-  "page_consumptions" // Updated metric
+"page_fan_adds",
+"page_engaged_users",
+"page_impressions",
+"page_views_total",
+"page_post_engagements",
+"page_follower_count",
+"page_actions_post_reactions_total", // Updated metric
+"page_consumptions" // Updated metric
 ];
-
-
 
 // const getPageImpression = (access_token)=>{
 
-//       // Define the date range for insights
-//       const since = "2025-01-01";
-//       const until = "2025-03-10";
+// // Define the date range for insights
+// const since = "2025-01-01";
+// const until = "2025-03-10";
 
-  
-//   axios.request({
-//     method: 'get',
-//     maxBodyLength: Infinity,
-//     url: `https://graph.facebook.com/v22.0/${selectedPageDetails?.id}/insights?access_token=${access_token}&since=${since}&until=${until}&metric=page_impressions`,
-//     headers: { 
-//       'Content-Type': 'application/json'
-//     },
-//   })
-//   .then((response) => {
-//     console.log(JSON.stringify(response.data));
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+// axios.request({
+// method: 'get',
+// maxBodyLength: Infinity,
+// url: `https://graph.facebook.com/v22.0/${selectedPageDetails?.id}/insights?access_token=${access_token}&since=${since}&until=${until}&metric=page_impressions`,
+// headers: {
+// 'Content-Type': 'application/json'
+// },
+// })
+// .then((response) => {
+// console.log(JSON.stringify(response.data));
+// })
+// .catch((error) => {
+// console.log(error);
+// });
 // }
-
-
 
 <!-- * WHILE USING SINCE & UNTIL -->
 
 # day --> add all values
+
 # week --> choose the greatest value
+
 # 28_days --> choose the greatest value
 
 <!-- * IF SINCE AND UNTIL HAVE NOT USED  -->
 
-
  <!-- *TASK TODO -->
 
 # GET THE POST LIST API
+
 # GET THE POSTS COMMENT SHARE AND IMPRESSIONS USING THAT POST ID
+
 # THE GET THE PAGE VIEWS
 
+<!-- !  Total Followers / Fans -->
 
+# Facebook Analytics API Documentation
 
+## Core Metrics
 
+### Followers / Fans
+- **Definition**: The total number of people who have subscribed to or follow your social media profile.
+- **Purpose**: Measures the size of your audience.
 
+### Total Engagement
+- **Definition**: Total number of interactions (likes, comments, shares, saves, clicks, etc.) on your content.
+- **Calculation**:
+  ```
+  ENGAGEMENT RATE = (TOTAL ENGAGEMENT / (TOTAL IMPRESSIONS OR TOTAL FOLLOWERS)) × 100
+  ```
+- **Example**: If a Facebook post gets 500 likes, 1000 clicks, 200 comments, and 300 shares, the total engagement is 2,000.
+- **Purpose**: Helps measure how actively users are interacting with your content. A high engagement rate indicates strong audience interest.
 
+### Total Impressions
+- **Definition**: The number of times your content appears on users' screens.
+- **Purpose**: Measures how many times your content is seen, which helps understand visibility and reach.
+- **Example**: If a LinkedIn post appears in different users' feeds 5,000 times, the total impressions count is 5,000, even if some users see it multiple times.
 
+### Total Reactions
+- **Definition**: The total number of reactions (likes, loves, wows, etc.) a post receives.
+- **Purpose**: Measures how people feel about your content based on their reaction choices.
+- **Example**: If a LinkedIn post receives 300 👍 (likes), 50 ❤️ (loves), and 20 😮 (wows), the total reactions would be 370.
 
+## Authentication
 
- <li>
-                          Total Reactions: {like+love+haha+wow+sad+angry+care}
-                          </li>
+### Login with Facebook
+- **Method**: Using Facebook SDK for authentication
+- **Required Scopes**:
+  ```json
+  {
+    "scope": "public_profile,email,pages_show_list,read_insights,pages_read_user_content,pages_read_engagement,page_events,business_management,pages_manage_metadata,ads_read,pages_manage_engagement,pages_manage_metadata,pages_manage_posts,pages_read_engagement,pages_show_list,publish_video"
+  }
+  ```
+- **Note**: 
+  - Scopes represent permissions to access specific categories of data
+  - Meta server authorizes tokens based on these scopes
+  - Data access is limited to what's included in the specified scopes
+- **Successful Login Returns**: ID, name, email, display picture, and access token
+
+## API Endpoints
+
+### Getting Pages Data
+- **Endpoint**: `https://graph.facebook.com/v22.0/me/accounts`
+- **Required Parameters**: 
+  - `fields`: id, name, fan_count, followers_count, link, picture, access_token
+  - `access_token`: Token generated by login
+- **Example Request**:
+  ```javascript
+  const fetchPages = async (token) => {
+    try {
+      const response = await axios.get(
+        `https://graph.facebook.com/v22.0/me/accounts?fields=id,name,fan_count,followers_count,link,picture,access_token&access_token=${token}`
+      );
+      setPages(response.data.data);
+    } catch (error) {
+      console.error("Error fetching pages:", error);
+    }
+  };
+  ```
+- **Returns**: Array of page objects with id, name, fan_count, followers_count, link, picture, and page_access_token
+
+### Getting Page Posts
+- **Endpoint**: `https://graph.facebook.com/v22.0/{page_id}/posts`
+- **Required Parameters**:
+  - `fields`: id, message, created_time
+  - `access_token`: Page access token
+- **Example Request**:
+  ```
+  https://graph.facebook.com/v22.0/489993570873674/posts?fields=id,message,created_time&access_token=EAAaeIB2v4jkBO...
+  ```
+- **Returns**: Post ID, message (post content), and creation timestamp
+
+### Getting Post Engagement Data
+- **Endpoint**: `https://graph.facebook.com/v22.0/{post_id}`
+- **Required Parameters**:
+  - `since`: Start date (YYYY-MM-DD)
+  - `until`: End date (YYYY-MM-DD)
+  - `fields`: comments.summary(true), shares, insights.metric(post_clicks)
+  - `access_token`: Page access token
+- **Example Request**:
+  ```
+  https://graph.facebook.com/v22.0/489993570873674_122113897814751892?since=2025-01-10&until=2025-03-10&fields=comments.summary(true),shares,insights.metric(post_clicks)&access_token=EAAaeIB2v4jkBO...
+  ```
+
+### Getting Page Impressions
+- **Endpoint**: `https://graph.facebook.com/v22.0/{page_id}/insights`
+- **Required Parameters**:
+  - `metric`: page_impressions
+  - `since`: Start date (optional)
+  - `until`: End date (optional)
+  - `access_token`: Page access token
+- **Example Request**:
+  ```
+  https://graph.facebook.com/v22.0/489993570873674/insights?access_token=EAAaeIB2v4jkBO...&since=&until=&metric=page_impressions
+  ```
+
+### Getting Total Reactions
+- **Endpoint**: `https://graph.facebook.com/v22.0/{page_id}/insights`
+- **Required Parameters**:
+  - `metric`: page_actions_post_reactions_total
+  - `since`: Start date (optional)
+  - `until`: End date (optional)
+  - `access_token`: Page access token
+- **Example Request**:
+  ```
+  https://graph.facebook.com/v22.0/489993570873674/insights?access_token=EAAaeIB2v4jkBO...&since=&until=&metric=page_actions_post_reactions_total
+  ```
